@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<title>Titre de la page</title>
+</head>
+
+
+<body>
+    <h1>Liste des pays où a joué le plus d'acteurs : {{ nom }}</h1>
+    <table>
+
+		<tr>
+			<th>Country</th>
+			<th>Actors</th>
+		</tr>
+		
+		{% for i in country.index: %}
+        <tr>
+            <td>{{ country.iloc[i]['co_name'] }}</td>
+            <td>{{ country.iloc[i]['actor'] }}</td>
+        </tr>
+		{% endfor %}
+       
+    </table>
+	
+	<img src="/home/jonathan/netflix/template/nbr_acteur_pays.png" alt="Nbr_acteur_pays" />
+	
+	<footer> 
+	{{ time_stamp }}
+	</footer> 
+
+</body>
+</html>
+
+
